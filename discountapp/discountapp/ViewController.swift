@@ -26,14 +26,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func button(_ sender: UIButton) {
-        var original = og.text!
-        var sales = sp.text!
-        
-        var o = Double(original)
-        var s = Double (sales)
-        
-        
-        if(sales<original){
+        let original = og.text!
+        let o = Double(original)
+        let sales = sp.text!
+        let s = Double (sales)
+        if(Double(o!)>Double(s!)){
             dsct.text = "your discount"
         var discount = 100*(Double(o!)-Double(s!))/(Double(o!))
             result.text = "\(discount)"
